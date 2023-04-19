@@ -3,7 +3,7 @@
 const db = require('./db')
 
 const User = require('./models/User');
-const Order = require('./models/order');
+const Order = require('./models/Order'); 
 const Product = require('./models/Product')
 
 //associations could go here!
