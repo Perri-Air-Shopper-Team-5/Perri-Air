@@ -1,5 +1,5 @@
 {
-  "name": "perri-air",
+  "name": "perri_air",
   "version": "2.0.0",
   "description": "Some boilerplate code to get you started - get shakin'!",
   "main": "index.js",
@@ -26,7 +26,8 @@
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "pg": "^8.8.0",
-    "sequelize": "^6.25.3"
+    "sequelize": "^6.25.3",
+    "urlencode": "^1.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
