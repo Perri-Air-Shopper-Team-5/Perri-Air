@@ -19,6 +19,12 @@ const Product = db.define("product", {
             min: 0,
         },
     },
+
+    imageUrl: {
+        type: Sequelize.STRING,
+        defaultValue: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn_vcDSavNE9UiF53l_RpMoHqz3WjqYIeq6uBwA9gs&s',
+    },
+
     description: {
         type: Sequelize.TEXT,
         allowNull: false,
