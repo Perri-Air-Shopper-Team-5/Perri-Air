@@ -4,7 +4,7 @@ import { fetchProducts, selectProducts } from "./productsSlice";
 
 const Products = () => {
     const dispatch = useDispatch();
-    const products = useSelector(selectProducts);
+    const products = useSelector((state) => state.products);
 
     useEffect(() => {
         dispatch(fetchProducts());
