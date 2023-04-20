@@ -1,5 +1,6 @@
 body {
-  font-family: sans-serif;
+  font-family: Georgia;
+  background-color: lightblue;
 }
 
 a {
@@ -10,9 +11,16 @@ label {
   display: block;
 }
 
+/* .nav-container {
+  display: flex;
+  justify-content: center;
+  
+} */
+
 nav a {
   display: inline-block;
   margin: 1em;
+  text-decoration: dotted;
 }
 
 form div {
