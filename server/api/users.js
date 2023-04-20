@@ -33,5 +33,35 @@ router.get("/:userId", async (req, res, next) => {
   }
 });
 
+
+// POST /api/users/
+router.post("/", async (req, res, next) => {
+  try {
+    const emailExists = await User.findOne({
+      where: {
+        email: req.body.email
+      }
+    });
+
+    const usernameExists = await User.findOne({
+      where: {
+        username: req.body.username
+      }
+    });
+
+    if (emailExists !== null) {
+      res.status(409).send("Email already exists");
+      return;
+    } else if (usernameExists !== null) {
+      res.status(409).send("Username already exists");
+      return;
+    } else {
+      res.status(201).send(await User.create(req.body));
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router
 
