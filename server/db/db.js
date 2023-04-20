@@ -21,5 +21,6 @@ if(process.env.DATABASE_URL){
 }
 
 const db = new Sequelize(
-  process.env.DATABASE_URL || `postgres://localhost:5432/${databaseName}`, config)
+  process.env.DATABASE_URL || `postgresql://elucero9:v2_43FJu_g2PHvWYKykLXf8GbKi3W9DE@db.bit.io:5432/elucero9/${databaseName}?ssl=true`, config)
 module.exports = db
+// postgresql://elucero9:v2_43FJu_g2PHvWYKykLXf8GbKi3W9DE@db.bit.io:5432/elucero9/perri_air
