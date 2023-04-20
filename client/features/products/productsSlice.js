@@ -4,25 +4,30 @@ import axios from "axios";
 export const fetchProducts = createAsyncThunk(
     "products/fetchProducts",
     async () => {
-        const response = await axios.get("/api/products");
-        return response.data;
+        try {
+            const { data } = await axios.get("/api/products");
+            return data;
+        } catch (err) {
+            console.log(err);
+        }
     }
 );
 
-export const productSlice = createSlice({
+export const productsSlice = createSlice({
     name: "products",
     initialState: [],
     extraReducers: (builder) => {
         builder
             .addCase(fetchProducts.pending, (state) => {
-                state.status = "loading";
+                console.log("loading");
             })
             .addCase(fetchProducts.fulfilled, (state, action) => {
-                state.status = "succeeded";
-                state.list = action.payload;
+                state = action.payload;
+                console.log(state);
+                return state;
             })
             .addCase(fetchProducts.rejected, (state, action) => {
-                state.status = "failed";
+                console.log("failed");
                 state.error = action.error.message;
             });
     },
@@ -30,4 +35,4 @@ export const productSlice = createSlice({
 
 export const selectProducts = (state) => state.products;
 
-export default productSlice.reducer;
+export default productsSlice.reducer;
