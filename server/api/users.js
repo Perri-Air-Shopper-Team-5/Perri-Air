@@ -36,7 +36,7 @@ router.get("/:userId", async (req, res, next) => {
 // PUT /api/users/:userId
 router.put('/:id', async (req, res, next) => {
   try {
-    const user = await User.findByPk(req.params.id);
+    const user = await User.findByPk(req.params.userId);
     res.send(await user.update(req.body));
   } catch (error) {
     next(error);

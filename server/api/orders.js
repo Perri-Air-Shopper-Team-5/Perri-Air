@@ -32,7 +32,7 @@ router.get("/:orderId", async (req, res, next) => {
 // PUT /api/orders/orderId
 router.put('/:id', async (req, res, next) => {
   try {
-    const order = await Order.findByPk(req.params.id);
+    const order = await Order.findByPk(req.params.orderId);
     res.send(await order.update(req.body));
   } catch (error) {
     next(error);

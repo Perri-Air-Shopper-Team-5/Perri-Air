@@ -41,7 +41,7 @@ router.post('/', async (req, res, next) => {
 // PUT /api/products/productid (ADMIN)
 router.put('/:productId', async (req, res, next) => {
   try {
-    const product = await Product.findByPk(req.params.id);
+    const product = await Product.findByPk(req.params.productId);
     res.send(await product.update(req.body));
   } catch (error) {
     next(error);
@@ -49,9 +49,9 @@ router.put('/:productId', async (req, res, next) => {
 });
 
 // DELETE /api/products/productId
-router.delete('/:produtId', async (req, res, next) => {
+router.delete('/:productId', async (req, res, next) => {
   try {
-    const product = await Product.findByPk(req.params.id);
+    const product = await Product.findByPk(req.params.productId);
     await product.destroy();
     res.send(todo);
   } catch (error) {
