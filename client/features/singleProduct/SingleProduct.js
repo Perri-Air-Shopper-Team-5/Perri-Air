@@ -6,29 +6,28 @@ import { singleProduct } from "./SingleProductSlice";
 import Products from "../products/Products";
 
 const SingleProduct = () => {
-    const { productId } = useParams();
+  const { productId } = useParams();
 
-    const product = useSelector(singleProduct);
+  const product = useSelector(singleProduct);
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(singleProductAsync(productId))
-    }, [dispatch])
+  useEffect(() => {
+    dispatch(singleProductAsync(productId));
+  }, [dispatch]);
 
-    const { name, price, imageUrl, description, quantity } = product;
+  const { name, price, imageUrl, description, quantity } = product;
 
-    return (
-        <div className='product-card'>
-            <h1>{name}</h1>
-            <img src={imageUrl} />
-            <br/>
-            <small>${price}.00 USD</small>
-            <p>{description}</p>
-            <button>Add to Cart</button>
-            <Link to='/products'><button>Go Back</button></Link>
-        </div>
-    )
-}
+  return (
+    <div className="product-card">
+      <h1>{name}</h1>
+      <img src={imageUrl} />
+      <br />
+      <small>${price}.00 USD</small>
+      <p>{description}</p>
+      <button>Add to Cart</button>
+    </div>
+  );
+};
 
 export default SingleProduct;
