@@ -5,7 +5,7 @@ export const addProductAsync = createAsyncThunk(
   "products/addProduct",
   async (dataObject) => {
     try {
-    const { data } = await axios.post(`/api/products/`, dataObject);
+    const { data } = await axios.post(`/api/products`, dataObject);
     return data;
   } catch (error) {
     throw new Error(`${error}`);
@@ -15,10 +15,11 @@ export const addProductAsync = createAsyncThunk(
 
 export const productsAdminSlice = createSlice({
   name: "productsAdmin",
-  initialState: {},
+  initialState: [],
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(addProductAsync.fulfilled, (state, action) => {
-      state.push(action.payload);
+      console.log("Added to DB successfully");
     });
   },
 });

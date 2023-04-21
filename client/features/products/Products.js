@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts, selectProducts } from "./productsSlice";
 import { singleProduct } from "../singleProduct/SingleProductSlice";
@@ -15,6 +15,11 @@ const Products = () => {
     useEffect(() => {
         dispatch(fetchProducts());
     }, [dispatch]);
+
+    useEffect(() => {
+        dispatch(fetchProducts());
+      }, [trigger]);
+
 
     return (
         <div>

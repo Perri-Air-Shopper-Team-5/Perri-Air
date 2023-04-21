@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  addProductAsync,
-  selectProduct
+  addProductAsync
 } from "./productsAdminSlice.js";
 
 const ProductsFormsAdmin = (props) => {
@@ -11,7 +10,6 @@ const ProductsFormsAdmin = (props) => {
   const setTrigger = props.setTrigger;
 
   const dispatch = useDispatch();
-  const product = useSelector(selectProduct);
 
 
   const [name, setName] = useState("");
@@ -59,12 +57,12 @@ const ProductsFormsAdmin = (props) => {
           onChange={(event) => setName(event.target.value)}
         />
         <br></br>
-        <label htmlFor="price">Campus Address: </label>
+        <label htmlFor="price">Product Price: </label>
         <input
           type="number"
           name="price"
-          placeholder="Price (Required)"
-          value={address}
+          value={price}
+          placeholder="Price (required)"
           onChange={(event) => setPrice(event.target.value)}
         />
         <br></br>
@@ -72,8 +70,8 @@ const ProductsFormsAdmin = (props) => {
         <input
           type="number"
           name="quantity"
-          placeholder="Quantity (Required)"
-          value={address}
+          value={quantity}
+          placeholder="Quantity (required)"
           onChange={(event) => setQuantity(event.target.value)}
         />
         <br></br>
@@ -89,7 +87,7 @@ const ProductsFormsAdmin = (props) => {
         <label htmlFor="description">Description : </label>
         <textarea
           name="description"
-          placeholder="Enter description of product"
+          placeholder="Enter description of product (required)"
           rows="5"
           cols="40"
           value={description}
