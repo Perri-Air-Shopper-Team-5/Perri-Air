@@ -46,7 +46,7 @@ const AppRoutes = () => {
             )}
             <Routes>
                 <Route path="/cart" element={<Cart />} />
-                <Route path="/products" element={<Products />} />
+                <Route path="/*" element={<Products />} />
             </Routes>
         </div>
     );
