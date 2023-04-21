@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import ProductsFormsAdmin from "../productsAdmin/ProductsFormsAdmin";
 
 const Products = () => {
-    const [trigger, setTrigger] = useState(false);
 
     const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
@@ -22,8 +21,11 @@ const Products = () => {
 
 
     return (
+       <>
         <div>
-        <ProductsFormsAdmin trigger={trigger} setTrigger={setTrigger} />
+           <ProductsFormsAdmin trigger={trigger} setTrigger={setTrigger} />
+        </div>
+        <div>
             {products.map((product) => (
                 <div key={product.id}>
                     <Link to={`/products/${product.id}`}>
@@ -46,6 +48,7 @@ const Products = () => {
                 </div>
             ))}
         </div>
+        </>
     );
 };
 
