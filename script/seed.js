@@ -57,6 +57,8 @@ async function seed() {
             name: "Tatooine Air Can",
             price: 10,
             quantity: 50,
+            imageUrl:
+                "https://cdn.discordapp.com/attachments/1099056786595647610/1099056802978611230/iu.png",
             description:
                 "Breathe in the dusty, dry air of the desert planet Tatooine from Star Wars",
         }),
@@ -64,6 +66,8 @@ async function seed() {
             name: "Hoth Air Can",
             price: 15,
             quantity: 30,
+            imageUrl:
+                "https://cdn.discordapp.com/attachments/1099056786595647610/1099057482363580538/iu.png",
             description:
                 "Experience the icy, cold air of the remote planet Hoth from Star Wars",
         }),
@@ -71,6 +75,8 @@ async function seed() {
             name: "Endor Air Can",
             price: 12,
             quantity: 40,
+            imageUrl:
+                "https://cdn.discordapp.com/attachments/1099056786595647610/1099057600357740664/iu.png",
             description:
                 "Inhale the fresh, forest air of the moon Endor from Star Wars",
         }),
@@ -78,6 +84,8 @@ async function seed() {
             name: "Mordor Air Can",
             price: 20,
             quantity: 20,
+            imageUrl:
+                "https://cdn.discordapp.com/attachments/1099056786595647610/1099057746839601213/iu.png",
             description:
                 "Breathe in the acrid, ash-filled air of the fiery realm of Mordor from Lord of the Rings",
         }),
@@ -85,6 +93,8 @@ async function seed() {
             name: "Rivendell Air Can",
             price: 25,
             quantity: 15,
+            imageUrl:
+                "https://cdn.discordapp.com/attachments/1099056786595647610/1099058030387142676/iu.png",
             description:
                 "Enjoy the crisp, clean air of the elven city of Rivendell from Lord of the Rings",
         }),
@@ -92,6 +102,8 @@ async function seed() {
             name: "Disneyland Air Can",
             price: 8,
             quantity: 60,
+            imageUrl:
+                "https://cdn.discordapp.com/attachments/1099056786595647610/1099058512505602159/iu.png",
             description:
                 "Experience the magical air of the happiest place on Earth, Disneyland from Disney",
         }),
@@ -99,6 +111,8 @@ async function seed() {
             name: "Arendelle Air Can",
             price: 18,
             quantity: 25,
+            imageUrl:
+                "https://cdn.discordapp.com/attachments/1099056786595647610/1099059145564491776/iu.png",
             description:
                 "Breathe in the cool, icy air of the frozen kingdom of Arendelle from Disney",
         }),
@@ -106,6 +120,8 @@ async function seed() {
             name: "Konoha Air Can",
             price: 14,
             quantity: 35,
+            imageUrl:
+                "https://cdn.discordapp.com/attachments/1099056786595647610/1099059621123068096/iu.png",
             description:
                 "Inhale the fresh, crisp air of the hidden leaf village from Naruto",
         }),
@@ -113,6 +129,8 @@ async function seed() {
             name: "Sunagakure Air Can",
             price: 16,
             quantity: 30,
+            imageUrl:
+                "https://cdn.discordapp.com/attachments/1099056786595647610/1099059848534032558/iu.png",
             description:
                 "Experience the warm, dry air of the hidden sand village from Naruto",
         }),
@@ -120,6 +138,8 @@ async function seed() {
             name: "Kirigakure Air Can",
             price: 17,
             quantity: 28,
+            imageUrl:
+                "https://cdn.discordapp.com/attachments/1099056786595647610/1099060386478694540/iu.png",
             description:
                 "Breathe in the moist, misty air of the hidden mist village from Naruto",
         }),
