@@ -6,6 +6,7 @@ import Home from "../features/home/Home";
 import { me } from "./store";
 import Cart from "../features/cart/Cart";
 import Products from "../features/products/Products";
+import SingleProduct from "../features/singleProduct/SingleProduct";
 
 /**
  * COMPONENT
@@ -47,6 +48,7 @@ const AppRoutes = () => {
             <Routes>
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/*" element={<Products />} />
+                <Route path='/products/:productId' element={<SingleProduct/>} />
             </Routes>
         </div>
     );
