@@ -16,8 +16,10 @@ const Products = () => {
         <div>
             {products.map((product) => (
                 <div key={product.id}>
-                    <Link to={`/products/${product.id}`}><h3>{product.name}</h3></Link>
-                    <img src={product.imgUrl} alt={product.name} />
+                    <Link to={`/products/${product.id}`}>
+                        <h3>{product.name}</h3>
+                    </Link>
+                    <img src={product.imageUrl} alt={product.name} />
                     <p>Price: ${product.price}</p>
                     <p>{product.description}</p>
                     <select>
