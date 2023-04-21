@@ -29,8 +29,17 @@ router.get("/:orderId", async (req, res, next) => {
   }
 });
 
+// POST /api/orders
+router.post('/', async (req, res, next) => {
+  try {
+    res.status(201).send(await Order.create(req.body));
+  } catch (error) {
+    next(error);
+  }
+});
+
 // PUT /api/orders/orderId
-router.put('/:id', async (req, res, next) => {
+router.put('/:orderId', async (req, res, next) => {
   try {
     const order = await Order.findByPk(req.params.orderId);
     res.send(await order.update(req.body));
