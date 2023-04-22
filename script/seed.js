@@ -60,7 +60,7 @@ async function seed() {
             imageUrl:
                 "https://cdn.discordapp.com/attachments/1099056786595647610/1099056802978611230/iu.png",
             description:
-                "Breathe in the dusty, dry air of the desert planet Tatooine from Star Wars",
+                "Breathe in the dusty, dry air of the desert planet Tatooine from Star Wars. Experience the atmosphere of this twin-sunned world, home to iconic characters like Luke Skywalker, Anakin Skywalker, and the infamous Mos Eisley Cantina.",
         }),
         Product.create({
             name: "Hoth Air Can",
@@ -69,7 +69,7 @@ async function seed() {
             imageUrl:
                 "https://cdn.discordapp.com/attachments/1099056786595647610/1099057482363580538/iu.png",
             description:
-                "Experience the icy, cold air of the remote planet Hoth from Star Wars",
+                "Experience the icy, cold air of the remote planet Hoth from Star Wars. Immerse yourself in the frigid environment of the sixth planet in the Hoth system, the site of the epic Battle of Hoth between the Rebel Alliance and the Galactic Empire.",
         }),
         Product.create({
             name: "Endor Air Can",
@@ -78,7 +78,7 @@ async function seed() {
             imageUrl:
                 "https://cdn.discordapp.com/attachments/1099056786595647610/1099057600357740664/iu.png",
             description:
-                "Inhale the fresh, forest air of the moon Endor from Star Wars",
+                "Inhale the fresh, forest air of the moon Endor from Star Wars. Explore the lush, green sanctuary inhabited by the Ewoks and witness the towering trees and dense foliage that served as the backdrop for the decisive Battle of Endor.",
         }),
         Product.create({
             name: "Mordor Air Can",
@@ -87,7 +87,7 @@ async function seed() {
             imageUrl:
                 "https://cdn.discordapp.com/attachments/1099056786595647610/1099057746839601213/iu.png",
             description:
-                "Breathe in the acrid, ash-filled air of the fiery realm of Mordor from Lord of the Rings",
+                "Breathe in the acrid, ash-filled air of the fiery realm of Mordor from Lord of the Rings. Feel the heat of Mount Doom, the dark fortress of Barad-dûr, and the treacherous lands that challenged Frodo and Sam on their journey to destroy the One Ring.",
         }),
         Product.create({
             name: "Rivendell Air Can",
@@ -96,7 +96,7 @@ async function seed() {
             imageUrl:
                 "https://cdn.discordapp.com/attachments/1099056786595647610/1099058030387142676/iu.png",
             description:
-                "Enjoy the crisp, clean air of the elven city of Rivendell from Lord of the Rings",
+                "Enjoy the crisp, clean air of the elven city of Rivendell from Lord of the Rings. Embrace the serenity of the Last Homely House East of the Sea, surrounded by waterfalls, ancient architecture, and the wisdom of the Elves, a sanctuary for weary travelers.",
         }),
         Product.create({
             name: "Disneyland Air Can",
@@ -105,7 +105,7 @@ async function seed() {
             imageUrl:
                 "https://cdn.discordapp.com/attachments/1099056786595647610/1099058512505602159/iu.png",
             description:
-                "Experience the magical air of the happiest place on Earth, Disneyland from Disney",
+                "Experience the magical air of the happiest place on Earth, Disneyland from Disney. Relive the enchanting atmosphere of Main Street, U.S.A., Adventureland, Tomorrowland, and more, as the scent of popcorn, churros, and childhood memories fill the air.",
         }),
         Product.create({
             name: "Arendelle Air Can",
@@ -114,7 +114,7 @@ async function seed() {
             imageUrl:
                 "https://cdn.discordapp.com/attachments/1099056786595647610/1099059145564491776/iu.png",
             description:
-                "Breathe in the cool, icy air of the frozen kingdom of Arendelle from Disney",
+                "Breathe in the cool, icy air of the frozen kingdom of Arendelle from Disney's Frozen. Immerse yourself in the majestic fjords, snow-capped mountains, and charming village that Anna and Elsa call home, where love and family bonds triumph over adversity.",
         }),
         Product.create({
             name: "Konoha Air Can",
@@ -123,7 +123,7 @@ async function seed() {
             imageUrl:
                 "https://cdn.discordapp.com/attachments/1099056786595647610/1099059621123068096/iu.png",
             description:
-                "Inhale the fresh, crisp air of the hidden leaf village from Naruto",
+                "Inhale the fresh, crisp air of the Hidden Leaf Village from Naruto. Walk the bustling streets of this ninja village, home to the legendary Team 7, where the iconic Hokage Monument watches over the spirited community as a symbol of strength and unity.",
         }),
         Product.create({
             name: "Sunagakure Air Can",
@@ -132,7 +132,7 @@ async function seed() {
             imageUrl:
                 "https://cdn.discordapp.com/attachments/1099056786595647610/1099059848534032558/iu.png",
             description:
-                "Experience the warm, dry air of the hidden sand village from Naruto",
+                "Experience the warm, dry air of the Hidden Sand Village from Naruto. Feel the sun's heat in this desert village, home to the powerful Kazekage Gaara, where sandstorms sculpt the landscape and the resilient villagers have adapted to thrive in the arid conditions.",
         }),
         Product.create({
             name: "Kirigakure Air Can",
@@ -141,7 +141,7 @@ async function seed() {
             imageUrl:
                 "https://cdn.discordapp.com/attachments/1099056786595647610/1099060386478694540/iu.png",
             description:
-                "Breathe in the moist, misty air of the hidden mist village from Naruto",
+                "Breathe in the moist, misty air of the Hidden Mist Village from Naruto. Discover the fog-shrouded home of the legendary swordsman Zabuza, where the sound of crashing waves and the scent of the ocean blend with the mysteries concealed by the ever-present mist.",
         }),
     ]);
 
