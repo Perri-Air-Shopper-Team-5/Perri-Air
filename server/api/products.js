@@ -30,6 +30,7 @@ router.get("/:productId", async (req, res, next) => {
 
 // POST /api/products/ (ADMIN)
 router.post('/', async (req, res, next) => {
+  console.log(req.body);
   try {
     res.status(201).send(await Product.create(req.body));
   } catch (error) {
