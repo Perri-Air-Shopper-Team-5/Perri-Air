@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 import ProductsFormsAdmin from "../productsAdmin/ProductsFormsAdmin";
 
 const Products = () => {
-    
+
     //for when you want to refresh state when form updates
-    // const [trigger, setTrigger] = useState(false);
+    const [trigger, setTrigger] = useState(false);
 
     const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
