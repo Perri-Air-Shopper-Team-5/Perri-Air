@@ -22,7 +22,9 @@ const Products = () => {
                     <div className="product-content">
                         <img src={product.imageUrl} alt={product.name} />
                         <div className="product-details">
-                            <p>Price: ${product.price}</p>
+                            <p className="product-price">
+                                Price: ${product.price}
+                            </p>
                             <p>{product.description}</p>
                             <div className="product-actions">
                                 <label htmlFor={`qty-${product.id}`}>
