@@ -1,10 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts, selectProducts } from "./productsSlice";
 import { singleProduct } from "../singleProduct/SingleProductSlice";
 import { Link } from "react-router-dom";
 
+import ProductsFormsAdmin from "../productsAdmin/ProductsFormsAdmin";
+
 const Products = () => {
+
+    //for when you want to refresh state when form updates
+    const [trigger, setTrigger] = useState(false);
+
     const dispatch = useDispatch();
     const products = useSelector((state) => state.products);
 
@@ -12,12 +18,17 @@ const Products = () => {
         dispatch(fetchProducts());
     }, [dispatch]);
 
+    useEffect(() => {
+        dispatch(fetchProducts());
+      }, [trigger]);
+
+
     return (
-        <div className="products-container">
+        <div>
             {products.map((product) => (
-                <div key={product.id} className="product-card">
+                <div key={product.id}>
                     <Link to={`/products/${product.id}`}>
-                        <h2>{product.name}</h2>
+                        <h3>{product.name}</h3>
                     </Link>
                     <div className="product-content">
                         <img src={product.imageUrl} alt={product.name} />
@@ -44,6 +55,7 @@ const Products = () => {
                             </div>
                         </div>
                     </div>
+
                 </div>
             ))}
         </div>
