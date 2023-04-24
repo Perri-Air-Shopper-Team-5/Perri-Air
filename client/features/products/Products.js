@@ -30,20 +30,32 @@ const Products = () => {
                     <Link to={`/products/${product.id}`}>
                         <h3>{product.name}</h3>
                     </Link>
-                    <img src={product.imageUrl} alt={product.name} />
-                    <p>Price: ${product.price}</p>
-                    <p>{product.description}</p>
-                    <select>
-                        {Array.from(
-                            { length: product.quantity },
-                            (_, i) => i + 1
-                        ).map((qty) => (
-                            <option key={qty} value={qty}>
-                                {qty}
-                            </option>
-                        ))}
-                    </select>
-                    <button>Add to Cart</button>
+                    <div className="product-content">
+                        <img src={product.imageUrl} alt={product.name} />
+                        <div className="product-details">
+                            <p className="product-price">
+                                Price: ${product.price}
+                            </p>
+                            <p>{product.description}</p>
+                            <div className="product-actions">
+                                <label htmlFor={`qty-${product.id}`}>
+                                    Qty:
+                                </label>
+                                <select id={`qty-${product.id}`}>
+                                    {Array.from(
+                                        { length: product.quantity },
+                                        (_, i) => i + 1
+                                    ).map((qty) => (
+                                        <option key={qty} value={qty}>
+                                            {qty}
+                                        </option>
+                                    ))}
+                                </select>
+                                <button>Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             ))}
         </div>

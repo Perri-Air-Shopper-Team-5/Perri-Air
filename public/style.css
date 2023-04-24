@@ -11,18 +11,6 @@ label {
     display: block;
 }
 
-/* .nav-container {
-  display: flex;
-  justify-content: center;
-  
-} */
-
-/* nav a {
-    display: inline-block;
-    margin: 1em;
-    text-decoration: dotted;
-} */
-
 /* navbar styling */
 
 .navbar {
@@ -117,6 +105,11 @@ label {
     justify-content: space-between;
 }
 
+.product-price {
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
 .product-actions {
     display: flex;
     align-items: center;
@@ -179,6 +172,8 @@ label {
 
 .single-product-price {
     margin-left: 1em;
+    font-size: 1.5em;
+    font-weight: bolder;
 }
 
 .single-product-qty {
