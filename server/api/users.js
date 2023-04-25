@@ -19,10 +19,13 @@ router.get('/', async (req, res, next) => {
 
 // GET /api/users/userId
 router.get("/:userId", async (req, res, next) => {
+
+   console.log(req.user)
+   
   try {
     const user = await User.findOne({
       where: {
-        id: req.params.userId,
+        id: req.user.id,
       },
       include: { all: true }
     });
