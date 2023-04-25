@@ -23,13 +23,13 @@ const UserList = () => {
 
   return (
     <div className='user-container'>
-      <h1>Best Seller's Book List</h1>
+      <h1>User List</h1>
       <div className='user-list'>
-        { user.map((book) => (
-            <Link key={user.id} to={`/user/${user.id}`}>
+        { users.map((user) => (
+            <Link key={user.id} to={`/users/${user.id}`}>
               <div className='user-card'>
                 <section>
-                  <h1>{user.name}</h1>
+                  <h1>{user.username}</h1>
                 </section>
               </div>
             </Link>

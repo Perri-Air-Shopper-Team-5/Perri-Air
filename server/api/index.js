@@ -5,6 +5,9 @@ const { models: { User }} = require('../db')
 router.use(async (req, res, next) => {
   try {
     const user = await User.findByToken(req.headers.authorization)
+    if (user === null) {
+      return "not logged in";
+    }
     req.user = user;
    } catch (err) {
   }

@@ -8,6 +8,7 @@ import Cart from "../features/cart/Cart";
 import Products from "../features/products/Products";
 import SingleProduct from "../features/singleProduct/SingleProduct";
 import UsersList from "../features/users/UsersList"
+import SingleUser from "../features/user/SingleUser";
 
 /**
  * COMPONENT
@@ -51,7 +52,7 @@ const AppRoutes = () => {
                 <Route path="/*" element={<Products />} />
                 <Route path='/products/:productId' element={<SingleProduct/>} />
                 <Route path='/users' element={<UsersList />}/>
-                
+                <Route path='/users/:userId' element={<SingleUser />} />
            </Routes>
         </div>
     );

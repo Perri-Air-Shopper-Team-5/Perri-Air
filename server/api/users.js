@@ -3,6 +3,7 @@ const { models: { User }} = require('../db')
 
 // GET /api/users
 router.get('/', async (req, res, next) => {
+  console.log(req.user)
   try {
     const users = await User.findAll({
       // explicitly select only the id and username fields - even though
@@ -21,11 +22,11 @@ router.get('/', async (req, res, next) => {
 router.get("/:userId", async (req, res, next) => {
 
    console.log(req.user)
-   
+
   try {
     const user = await User.findOne({
       where: {
-        id: req.user.id,
+        id: req.params.userId,
       },
       include: { all: true }
     });

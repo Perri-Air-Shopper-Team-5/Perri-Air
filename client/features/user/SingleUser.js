@@ -1,29 +1,30 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 
-import { Link } from 'react-router-dom'
+import { Link, useParams } from "react-router-dom";
 
 const SingleUser = () => {
 
-
   const [user, setUser] = useState([])
 
-  useEffect(() => {
-    const fetchUsers = async () => {
+  const { userId } = useParams()
+
+  useEffect((
+  ) => {
+
+    const fetchUser = async (uId) => {
       try {
-          const { data } = await axios.get("/api/users");
+          const { data } = await axios.get(`/api/users/${uId}`);
           return setUser(data);
       } catch (err) {
           console.log(err);
       }
      }
-     fetchUsers()
+     fetchUser(userId)
   }, [])
 
-
   return (
-   <div>{user.name}</div>
-
+   <div>THE USER: {user.username}</div>
   )
 
 }
