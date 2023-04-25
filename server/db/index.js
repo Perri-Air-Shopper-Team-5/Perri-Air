@@ -33,6 +33,8 @@ Product.hasMany(Cart, {
   foreignKey: "productId",
 });
 
+Cart.hasMany(Product);
+
 module.exports = {
   db,
   models: {

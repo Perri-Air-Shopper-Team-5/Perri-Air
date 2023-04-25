@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchCartById = createAsyncThunk(
   "cart/fetchCartById",
   async (cartId) => {
-    const { data } = await axios.get(`/api/carts/${cartId}`);
+    const { data } = await axios.get(`/api/cart/${cartId}`);
     return data;
   }
 );
@@ -12,7 +12,7 @@ export const fetchCartById = createAsyncThunk(
 export const updateCartById = createAsyncThunk(
   "cart/updateCartById",
   async ({ cartId, cartItems }) => {
-    const { data } = await axios.put(`/api/carts/${cartId}`, cartItems);
+    const { data } = await axios.put(`/api/cart/${cartId}`, cartItems);
     return data;
   }
 );
@@ -33,9 +33,17 @@ export const updateCart = createAsyncThunk(
   }
 );
 
+export const addToCart = createAsyncThunk(
+  'cart/addToCart',
+  async ({ productId }) => {
+    const { data } = await axios.post('/api/cart', { productId });
+    return data
+  }
+)
+
 const cartSlice = createSlice({
   name: "cart",
-  initialState: {},
+  initialState: [],
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchCartById.fulfilled, (state, action) => {
@@ -54,6 +62,9 @@ const cartSlice = createSlice({
       state = action.payload;
       return state;
     });
+    builder.addCase(addToCart.fulfilled, (state, action) => {
+      state.push(action.payload);
+    })
   },
 });
 

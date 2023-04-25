@@ -18,11 +18,6 @@ const Products = () => {
         dispatch(fetchProducts());
     }, [dispatch]);
 
-    useEffect(() => {
-        dispatch(fetchProducts());
-      }, [trigger]);
-
-
     return (
         <div>
             {products.map((product) => (

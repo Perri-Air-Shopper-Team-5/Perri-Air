@@ -34,12 +34,13 @@ router.post('/', async (req, res, next) => {
   try {
     res.status(201).send(await Cart.create(req.body));
   } catch (error) {
-    next(error);
+    console.log(error)
+    next(error)
   }
 });
 
 // PUT /api/carts/cartId
-router.put('/:CartId', async (req, res, next) => {
+router.put('/:cartId', async (req, res, next) => {
   try {
     const cart = await Cart.findByPk(req.params.cartId);
     res.send(await cart.update(req.body));

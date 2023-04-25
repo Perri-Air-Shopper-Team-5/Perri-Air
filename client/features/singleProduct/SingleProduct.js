@@ -4,6 +4,7 @@ import { singleProductAsync } from "./SingleProductSlice";
 import { Link, useParams } from "react-router-dom";
 import { singleProduct } from "./SingleProductSlice";
 import Products from "../products/Products";
+import addToCart from '../cart/cartslice'
 
 const SingleProduct = () => {
     const { productId } = useParams();
@@ -16,7 +17,12 @@ const SingleProduct = () => {
         dispatch(singleProductAsync(productId));
     }, [dispatch]);
 
-    const { name, price, imageUrl, description, quantity } = product;
+    const { id, name, price, imageUrl, description, quantity } = product;
+
+
+    const handleAddToCart = (productId) => {
+       dispatch(addToCart(productId));
+    }
 
     return (
         <div className="single-product-container">
@@ -40,7 +46,7 @@ const SingleProduct = () => {
                                 </option>
                             ))}
                         </select>
-                        <button>Add to Cart</button>
+                        <button onClick={() => handleAddToCart(id)}>Add to Cart</button>
                     </div>
                 </div>
             </div>
