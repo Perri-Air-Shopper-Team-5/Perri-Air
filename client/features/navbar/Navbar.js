@@ -26,21 +26,15 @@ const Navbar = () => {
                             {/* The navbar will show these links after you log in */}
                             <Link to="/home">Home</Link>
                             <Link to="/cart">Cart</Link>
-
                             {isAdmin ? (
                              <Link to="/users">Users</Link>
                             ) : (null)}
                             <button
                                 type="button"
-
-                            <Link
-                                to="#"
-                                className="nav-link"
-
                                 onClick={logoutAndRedirectHome}
                             >
                                 Logout
-                            </Link>
+                            </button>
                         </>
                     ) : (
                         <>
