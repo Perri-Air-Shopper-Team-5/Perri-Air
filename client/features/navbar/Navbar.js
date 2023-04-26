@@ -24,13 +24,14 @@ const Navbar = () => {
                             {/* The navbar will show these links after you log in */}
                             <Link to="/home">Home</Link>
                             <Link to="/cart">Cart</Link>
+
                             <Link
                                 to="#"
                                 className="nav-link"
                                 onClick={logoutAndRedirectHome}
                             >
                                 Logout
-                            </Link>
+                            </button>
                         </>
                     ) : (
                         <>
