@@ -9,6 +9,9 @@ import { authenticate } from "../../app/store";
 **/
 
 const AuthForm = ({ name, displayName }) => {
+
+    console.log(name)
+
     const { error } = useSelector((state) => state.auth);
     const dispatch = useDispatch();
 
@@ -36,12 +39,14 @@ const AuthForm = ({ name, displayName }) => {
                     </label>
                     <input name="password" type="password" />
                 </div>
+
                 <div>
                     <label htmlFor="email">
                         <small>Email</small>
                     </label>
                     <input name="email" type="text" />
                 </div>
+                
                 <div>
                     <button type="submit">{displayName}</button>
                 </div>
