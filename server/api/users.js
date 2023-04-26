@@ -3,6 +3,7 @@ const { models: { User }} = require('../db')
 
 // GET /api/users
 router.get('/', async (req, res, next) => {
+   req
   try {
     const users = await User.findAll({
       // explicitly select only the id and username fields - even though
@@ -19,9 +20,6 @@ router.get('/', async (req, res, next) => {
 
 // GET /api/users/userId
 router.get("/:userId", async (req, res, next) => {
-
-   console.log(req.user)
-
   try {
     const user = await User.findOne({
       where: {

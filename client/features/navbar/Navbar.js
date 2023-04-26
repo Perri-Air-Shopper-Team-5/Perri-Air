@@ -28,12 +28,10 @@ const Navbar = () => {
                             {isAdmin ? (
                              <Link to="/users">Users</Link>
                             ) : (null)}
-                                type="button"
 
                             <Link
                                 to="#"
                                 className="nav-link"
-
                                 onClick={logoutAndRedirectHome}
                             >
                                 Logout

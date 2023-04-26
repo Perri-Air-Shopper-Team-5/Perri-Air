@@ -7,8 +7,6 @@ import { me } from "./store";
 import Cart from "../features/cart/Cart";
 import Products from "../features/products/Products";
 import SingleProduct from "../features/singleProduct/SingleProduct";
-import UsersList from "../features/users/UsersList"
-import SingleUser from "../features/user/SingleUser";
 
 /**
  * COMPONENT
@@ -16,12 +14,14 @@ import SingleUser from "../features/user/SingleUser";
 
 const AppRoutes = () => {
     const isLoggedIn = useSelector((state) => !!state.auth.me.id);
-    const isAdmin = useSelector((state) => !!state.auth.me.adminStatus);
     const dispatch = useDispatch();
+    const userData = useSelector((state) => state.auth.me);
 
     useEffect(() => {
         dispatch(me());
     }, []);
+
+    console.log(userData);
 
     return (
         <div>
@@ -29,7 +29,6 @@ const AppRoutes = () => {
                 <Routes>
                     <Route path="/*" element={<Home />} />
                     <Route to="/home" element={<Home />} />
-                    {}
                 </Routes>
             ) : (
                 <Routes>
@@ -61,6 +60,7 @@ const AppRoutes = () => {
                 : (null)
                }
            </Routes>
+
         </div>
     );
 };

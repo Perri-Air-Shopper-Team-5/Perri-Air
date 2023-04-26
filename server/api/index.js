@@ -1,5 +1,4 @@
 const router = require('express').Router()
-const { models: { User }} = require('../db')
 
 
 router.use(async (req, res, next) => {
