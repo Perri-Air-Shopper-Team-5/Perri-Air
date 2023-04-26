@@ -15,10 +15,13 @@ import SingleProduct from "../features/singleProduct/SingleProduct";
 const AppRoutes = () => {
     const isLoggedIn = useSelector((state) => !!state.auth.me.id);
     const dispatch = useDispatch();
+    const userData = useSelector((state) => state.auth.me);
 
     useEffect(() => {
         dispatch(me());
     }, []);
+
+    console.log(userData);
 
     return (
         <div>
@@ -48,7 +51,10 @@ const AppRoutes = () => {
             <Routes>
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/*" element={<Products />} />
-                <Route path='/products/:productId' element={<SingleProduct/>} />
+                <Route
+                    path="/products/:productId"
+                    element={<SingleProduct />}
+                />
             </Routes>
         </div>
     );
