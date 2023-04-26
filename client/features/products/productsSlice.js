@@ -23,6 +23,7 @@ export const productsSlice = createSlice({
             })
             .addCase(fetchProducts.fulfilled, (state, action) => {
                 state = action.payload;
+                // console.log(state);
                 return state;
             })
             .addCase(fetchProducts.rejected, (state, action) => {

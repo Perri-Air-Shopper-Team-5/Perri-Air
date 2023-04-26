@@ -36,8 +36,8 @@ const ProductsFormsAdmin = (props) => {
 
     await dispatch(addProductAsync(dataObject));
     setName("");
-    setPrice(NaN);
-    setQuantity(NaN);
+    setPrice(0);
+    setQuantity(0);
     setImageUrl("");
     setDescription("");
 
