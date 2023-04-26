@@ -1,18 +1,6 @@
 const router = require('express').Router()
 
 
-router.use(async (req, res, next) => {
-  try {
-    const user = await User.findByToken(req.headers.authorization)
-    if (user === null) {
-      return "not logged in";
-    }
-    req.user = user;
-   } catch (err) {
-  }
-  next()
-})
-
 router.use('/users', require('./users'))
 router.use('/products', require('./products'))
 router.use('/orders', require('./orders'))
