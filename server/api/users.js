@@ -3,14 +3,6 @@ const { models: { User }} = require('../db')
 
 // GET /api/users
 router.get('/', async (req, res, next) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  console.log(req.user)
->>>>>>> parent of 48649e7... users list done, admin restrictions
-=======
-  console.log(req.user)
->>>>>>> parent of 48649e7... users list done, admin restrictions
   try {
     const users = await User.findAll({
       // explicitly select only the id and username fields - even though
