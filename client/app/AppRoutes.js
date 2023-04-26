@@ -7,6 +7,7 @@ import { me } from "./store";
 import Cart from "../features/cart/Cart";
 import Products from "../features/products/Products";
 import SingleProduct from "../features/singleProduct/SingleProduct";
+import UsersList from "../features/users/UsersList";
 
 /**
  * COMPONENT
@@ -14,6 +15,7 @@ import SingleProduct from "../features/singleProduct/SingleProduct";
 
 const AppRoutes = () => {
     const isLoggedIn = useSelector((state) => !!state.auth.me.id);
+    const isAdmin = useSelector((state) => !!state.auth.me.adminStatus);
     const dispatch = useDispatch();
     const userData = useSelector((state) => state.auth.me);
 
@@ -53,8 +55,11 @@ const AppRoutes = () => {
                 <Route path="/*" element={<Products />} />
                 <Route
                     path="/products/:productId"
-                    element={<SingleProduct />}
-                />
+                    element={<SingleProduct />} />
+
+                { isAdmin ? (
+                <Route path='/users' element={<UsersList />} /> )
+                 : (null) }
             </Routes>
         </div>
     );
