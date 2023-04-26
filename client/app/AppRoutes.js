@@ -58,7 +58,7 @@ const AppRoutes = () => {
                 <Route path='/users' element={<UsersList />} /><Route path='/users/:userId' element={<SingleUser />} />
                 </>
                 )
-                : n
+                : (null)
                }
            </Routes>
         </div>
