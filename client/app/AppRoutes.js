@@ -51,16 +51,11 @@ const AppRoutes = () => {
             <Routes>
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/*" element={<Products />} />
-                <Route path='/products/:productId' element={<SingleProduct/>} />
-                { isAdmin ? (
-                <>
-                <Route path='/users' element={<UsersList />} /><Route path='/users/:userId' element={<SingleUser />} />
-                </>
-                )
-                : (null)
-               }
-           </Routes>
-
+                <Route
+                    path="/products/:productId"
+                    element={<SingleProduct />}
+                />
+            </Routes>
         </div>
     );
 };

@@ -25,17 +25,13 @@ const Navbar = () => {
                             <Link to="/home">Home</Link>
                             <Link to="/cart">Cart</Link>
 
-                            {isAdmin ? (
-                             <Link to="/users">Users</Link>
-                            ) : (null)}
-
                             <Link
                                 to="#"
                                 className="nav-link"
                                 onClick={logoutAndRedirectHome}
                             >
                                 Logout
-                            </Link>
+                            </button>
                         </>
                     ) : (
                         <>
