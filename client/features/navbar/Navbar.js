@@ -31,7 +31,7 @@ const Navbar = () => {
                                 onClick={logoutAndRedirectHome}
                             >
                                 Logout
-                            </button>
+                            </Link>
                         </>
                     ) : (
                         <>

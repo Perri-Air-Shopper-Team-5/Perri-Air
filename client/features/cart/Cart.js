@@ -1,10 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { selectCart } from "./cartslice";
+import { selectProducts } from "../products/productsSlice";
 
 const Cart = () => {
-    const cart = useSelector((state) => state.cart);
-    const products = useSelector((state) => state.products);
+    const cart = useSelector(selectCart);
+    const products = useSelector(selectProducts);
 
     return (
         <div>
