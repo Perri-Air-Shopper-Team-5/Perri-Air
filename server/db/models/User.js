@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 require('dotenv').config()
 
-
 const SALT_ROUNDS = 5;
 
 const User = db.define("user", {
@@ -22,9 +21,7 @@ const User = db.define("user", {
     },
     email: {
         type: Sequelize.STRING,
-        allowNull: false,
         validate: {
-            notEmpty: true,
             isEmail: true,
         },
     },
