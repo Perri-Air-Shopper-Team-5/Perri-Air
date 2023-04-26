@@ -4,7 +4,7 @@ const { models: { User }} = require('../db')
 
 router.use(async (req, res, next) => {
   try {
-    const user = await User.findByToken(req.headers.authorization)
+    const user = await User.findByToken(await req.headers.authorization);
     if (user === null) {
       return "not logged in";
     }

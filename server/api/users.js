@@ -3,7 +3,9 @@ const { models: { User }} = require('../db')
 
 // GET /api/users
 router.get('/', async (req, res, next) => {
-  console.log(req.user)
+
+
+  console.log(req.user);
   try {
     const users = await User.findAll({
       // explicitly select only the id and username fields - even though
@@ -21,8 +23,6 @@ router.get('/', async (req, res, next) => {
 // GET /api/users/userId
 router.get("/:userId", async (req, res, next) => {
 
-   console.log(req.user)
-
   try {
     const user = await User.findOne({
       where: {
@@ -37,45 +37,16 @@ router.get("/:userId", async (req, res, next) => {
   }
 });
 
-// POST /api/users/
-router.post("/", async (req, res, next) => {
-  try {
-    const emailExists = await User.findOne({
-      where: {
-        email: req.body.email
-      }
-    });
-
-    const usernameExists = await User.findOne({
-      where: {
-        username: req.body.username
-      }
-    });
-
-    if (emailExists !== null) {
-      res.status(409).send("Email already exists");
-      return;
-    } else if (usernameExists !== null) {
-      res.status(409).send("Username already exists");
-      return;
-    } else {
-      res.status(201).send(await User.create(req.body));
-    }
-  } catch (error) {
-    next(error);
-  }
-});
-
 
 // PUT /api/users/:userId
-router.put('/:uderId', async (req, res, next) => {
-  try {
-    const user = await User.findByPk(req.params.userId);
-    res.send(await user.update(req.body));
-  } catch (error) {
-    next(error);
-  }
-});
+// router.put('/:uderId', async (req, res, next) => {
+//   try {
+//     const user = await User.findByPk(req.params.userId);
+//     res.send(await user.update(req.body));
+//   } catch (error) {
+//     next(error);
+//   }
+// });
 
 
 module.exports = router
